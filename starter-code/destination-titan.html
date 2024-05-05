@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+    body{
+    background-image: url(assets/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+    }
+     .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .wifth{
+    width: 576px;
+    height: 69px;
+    filter: blur(4px);
+    position: absolute;
+    z-index: -1;
+    top: 21px;
+    background: #212936;
+    left: 58rem;
+  }
+  .link_list a{
+    text-decoration: none;
+    margin: 1.4rem;
+    color: white;
+    letter-spacing: 1.4px;
+  }
+  .link_list a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color: white;
+    position: absolute;
+    top: 75px;
+    transition:0.3s;
+  }
+ .link_list a:hover::before{
+    width: 70px;
+  }
+  header{
+    margin-top: 4rem;
+  }
+  .text-image h1{
+    color: white;
+  }
+  .text-image span{
+    color: #464953;
+  }
+  .text-image img{
+    margin-top: 44px;
+    animation: right 900ms;
+  }
+  @keyframes right{
+    from{
+      transform: scale(0);
+      opacity: 0;
+    }
+    to{
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .flex-cloumns{
+    animation: zoom 3s;
+  }
+  @keyframes zoom{
+    from{
+      opacity: 0;
+      transition: .5s;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .flex-cloumns a{
+    text-decoration: none;
+    margin: 1.4rem;
+    color: white;
+    letter-spacing: 1.4px;
+  }
+  .flex-cloumns a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color: white;
+    position: absolute;
+    top: 17rem;
+    transition:0.3s;
+  }
+  .link{
+    margin: 32px -4px;
+  }
+ .flex-cloumns a:hover::before{
+    width: 40px;
+  }
+  .flex-cloumns h1{
+    font-size: 8rem;
+    color: white;
+  }
+  .flex-cloumns p{
+    color: white;
+    width: 26rem;
+    line-height: 25px;
+  }
+  table{
+   color: white;
+   margin-top: 20px;
+  }
+  .big{
+    font-size: 2rem;
+  }
+  
+  
+  </style>
+  <nav>
+    <div class="logo">
+      <img src="assets/shared/logo.svg" alt="logo">
+      <div class="wifth"></div>
+    <div class="link_list">
+      <a href="index.html">00 HOME</a>
+      <a href="destination-europa.html">01 Destination</a>
+      <a href="crew-engineer.html">02 Crew</a>
+      <a href="technology-vehicle.html"> 03 Technology</a>
+    </div>
+    </div>
+  </nav>
+  <header>
+    <div class="flex">
+      <div class="text-image">
+        <h1><span>01</span> Pick your destination</h1>
+        <img src="assets/destination/image-titan.png" alt="Titan">
+      </div>
+      <div class="flex-cloumns">
+        <div class="link">
+        <a href="destination-moon.html">Moon</a>
+        <a href="destination-mars.html">Mars</a>
+        <a href="destination-europa.html">Europa</a>
+        <a href="destination-titan.html">Titan</a>
+        </div>
+        <h1>TITAN</h1>
+        <P>The only moon known to have a dense atmosphere other than Earth, Titan 
+          is a home away from home (just a few hundred degrees colder!). As a 
+          bonus, you get striking views of the Rings of Saturn.>
+            <hr style="margin-top: 30px; width: 22rem;">
+            <table>
+              <tr>
+                <th>  Avg. distance</th>
+                <th>Est. travel time</th>
+              </tr>
+              <tr class="big">
+                <td>1.6 bil. km</td>
+                <td>7 years</td>
+              </tr>
+            </table>
+      </div>
+    </div>
+  </header>
+
+ 
+<!----
+
+  Titan
+
+  The only moon known to have a dense atmosphere other than Earth, Titan 
+  is a home away from home (just a few hundred degrees colder!). As a 
+  bonus, you get striking views of the Rings of Saturn.
+
+  Avg. distance
+  1.6 bil. km
+
+  Est. travel time
+  7 years
+-->

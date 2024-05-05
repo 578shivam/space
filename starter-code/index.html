@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image: url(assets/home/background-home-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .wifth{
+    width: 576px;
+    height: 69px;
+    filter: blur(4px);
+    position: absolute;
+    z-index: -1;
+    top: 21px;
+    background: #8f949c75;
+    left: 58rem;
+  }
+  .harmbuger{
+    display: none;
+  }
+  .link_list a{
+    text-decoration: none;
+    margin: 1.4rem;
+    color: white;
+    letter-spacing: 1.4px;
+  }
+  .link_list a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color: white;
+    position: absolute;
+    top: 75px;
+    transition:0.3s;
+  }
+ .link_list a:hover::before{
+    width: 70px;
+  }
+
+  header{
+    margin-top: 10rem;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .text{
+    color: white;
+  }
+  .text h3{
+    font-size: 3rem;
+    font-weight: 100;
+    animation: right 2s;
+  }
+  .text h1{
+    font-size: 10rem;
+    font-weight: 100;
+    padding: 20px 0px;
+    animation: right 2s;
+  }
+  @keyframes right{
+    from{
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  .text p{
+    width: 26rem;
+    line-height: 33px;
+    font-weight: 100;
+    animation: zoom 4s;
+  }
+  @keyframes zoom{
+    from{
+      transform: scale(0);
+      opacity: 0;
+    }
+    to{
+      transform: scale(1);
+    }
+  }
+  .button-press button{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 15px;
+    animation: press  3s infinite alternate;
+    transition: 0.4s ease;
+  }
+  @keyframes press{
+    from{
+      transform: translateY(0%);
+    }
+    to{
+      transform: translateX(-70%);
+    }
+  }
+  @media (width < 600px) {
+    body{
+      background-image: url(assets/home/background-home-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden auto;
+    }
+    .harmbuger{
+      display: block;
+      cursor: pointer;
+    }
+    .link_list{
+      width: 300px;
+        height: 86vh;
+        background-color: #6b7575c2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 6rem;
+        right: 0rem;
+        display: none;
+
+    }
+    .show.link_list{
+      display: block;
+    }
+    .link_list a{
+      display: flex;
+        margin: 6.4rem;
+        flex-direction: column;
+    }
+    .link_list a::before{
+      display: none
+    }
+    
+    .flex{
+      display: flex;
+      flex-direction: column;
+    }
+    .text{
+      text-align: center;
+      margin: auto;
+    }
+    .text h3{
+      font-size: 1rem;
+    }
+    .text h1{
+      font-size: 5rem;
+    }
+    .button-press button{
+      animation: none;
+      width: 200px;
+      height: 200px;
+      margin-right: 10rem;
+      margin-top: 20px;
+    }
+  }
+  
+</style>
+<body>
+<nav>
+  <div class="logo">
+    <img src="assets/shared/logo.svg" alt="logo">
+    <div class="wifth"></div>
+    <div class="harmbuger" id="menus">
+      <img src="assets/shared/icon-hamburger.svg" alt="menu" id="harmbuger_icon" >
+      <img src="assets/shared/icon-close.svg" alt="close" id="close_icon">
+    </div>
+  <div class="link_list" id="links">
+    <a href="index.html">00 HOME</a>
+    <a href="destination-europa.html">01 Destination</a>
+    <a href="crew-engineer.html">02 Crew</a>
+    <a href="technology-vehicle.html"> 03 Technology</a>
+  </div>
+  </div>
+</nav>
+<header>
+<div class="flex">
+  <div class="text">
+    <h3>So, you want to travel to</h3>
+    <h1>SPACE</h1>
+    <p>Let’s face it; if you want to go to space, you might as well genuinely go to 
+      outer space and not hover kind of on the edge of it. Well sit back, and relax 
+      because we’ll give you a truly out of this world experience!</p>
+  </div>
+  <div class="button-press">
+    <button>EXPLORE</button>
+  </div>
+</div>
+<script>
+const menus = document.getElementById("menus");
+const hamburger_icon = document.getElementById("harmbuger_icon");
+const close_icon = document.getElementById("close_icon");
+close_icon.style.display = "none";
+const open = document.getElementById("links");
+
+menus.addEventListener("click", function () {
+  open.classList.toggle("show");
+  if (open.classList.contains("show")) {
+    close_icon.style.display = "block";
+    hamburger_icon.style.display = "none";
+  } else {
+    close_icon.style.display = "none";
+    hamburger_icon.style.display = "block";
+  }
+});
+
+  
+</script>
+</header>
+</body>
+</html>

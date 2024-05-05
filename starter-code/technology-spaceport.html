@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-image: url(assets/technology/background-technology-desktop.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 400;
+    }
+    .logo{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px;
+    }
+    .wifth{
+      width: 576px;
+      height: 69px;
+      filter: blur(4px);
+      position: absolute;
+      z-index: -1;
+      top: 21px;
+      background: #131522;
+      left: 58rem;
+    }
+    .link_list a{
+      text-decoration: none;
+      margin: 1.4rem;
+      color: white;
+      letter-spacing: 1.4px;
+    }
+    .link_list a::before{
+      content: "";
+      height: 4px;
+      width: 0px;
+      background-color: white;
+      position: absolute;
+      top: 75px;
+      transition:0.3s;
+    }
+   .link_list a:hover::before{
+      width: 70px;
+    }
+    .text h1{
+      color: white;
+      margin-left: 5rem;
+      margin-top: 5rem;
+    }
+    .text span{
+      color: #464953;
+    margin-right: 15px;
+    }
+    .circle a{
+      text-decoration: none;
+      margin: 1.3rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      color: white;
+      border: 1px solid;
+    }
+    .circle a:hover{
+      background-color: white;
+      transition: 0.4s;
+      color: black;
+    }
+    .flex-1{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .launch span{
+      margin-top: 10px;
+      color: #727486;
+    }
+    .launch {
+      color: white;
+      animation: 4s zoom;
+    }
+    @keyframes zoom{
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    .launch h1{
+      font-size: 4rem;
+    }
+    .launch p{
+      width: 30rem;
+      margin-top: 15px;
+      line-height: 30px;
+      color: #7f8197;
+    }
+    .nasa img {
+      width: 30rem;
+      animation: 3s circle;
+    }
+    @keyframes circle{
+      from{
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+      to{
+        transform: rotate(360deg);
+        opacity: 1;
+      }
+    }
+</style>  
+<nav>
+  <div class="logo">
+    <img src="assets/shared/logo.svg" alt="logo">
+    <div class="wifth"></div>
+  <div class="link_list">
+    <a href="index.html">00 HOME</a>
+    <a href="destination-europa.html">01 Destination</a>
+    <a href="crew-engineer.html">02 Crew</a>
+    <a href="technology-vehicle.html"> 03 Technology</a>
+  </div>
+  </div>
+</nav>
+<head>
+  <div class="text">
+    <h1> <span>03</span>Space launch 101</h1>
+  </div>
+  <div class="flex-1">
+    <div class="circle">
+      <a href="technology-vehicle.html">1</a>
+      <a href="technology-spaceport.html">2</a>
+      <a href="technology-capsule.html">3</a>
+    </div>
+    <div class="launch">
+      <span>  The terminology...</span>
+      <h1>Spaceport</h1>
+      <p>
+        A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+        by analogy to the seaport for ships or airport for aircraft. Based in the 
+        famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+        of the Earth’s rotation for launch. </p>
+    </div>
+    <div class="nasa">
+      <img src="assets/technology/image-spaceport-portrait.jpg" alt="basa">
+    </div>
+  </div>
+</head>
+</body>
+</html>
